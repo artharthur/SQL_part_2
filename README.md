@@ -27,7 +27,7 @@ HAVING COUNT(cu.customer_id) > 300;
 **Условие:** Получить количество фильмов, продолжительность которых больше средней продолжительности всех фильмов.
 
 **SQL-запрос:**
-```sql
+sql
 SELECT COUNT(*) AS film_count
 FROM film
 WHERE length > (
@@ -42,7 +42,7 @@ WHERE length > (
 **Условие:** Получить информацию, за какой месяц была получена наибольшая сумма платежей, и добавить информацию по количеству аренд за этот месяц.
 
 **SQL-запрос:**
-```sql
+sql
 SELECT 
     DATE_FORMAT(payment_date, '%Y-%m') AS month,
     SUM(amount) AS total_payments,
