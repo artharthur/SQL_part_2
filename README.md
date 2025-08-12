@@ -1,5 +1,3 @@
-# MySQL DDL/DML Homework 2
-
 ## Задание 1
 **Условие:** Получить информацию о магазине, в котором обслуживается более 300 покупателей. Вывести:
 - фамилию и имя сотрудника;
@@ -21,7 +19,7 @@ JOIN customer cu ON st.store_id = cu.store_id
 GROUP BY st.store_id
 HAVING COUNT(cu.customer_id) > 300;
 
-![users](screenshots/01_store_over_300_customers.png)
+![users](./screenshots/01_store_over_300_customers.png)
 
 ---
 
@@ -36,7 +34,7 @@ WHERE length > (
     SELECT AVG(length) FROM film
 );
 
-![users](screenshots/02_films_above_avg_length.png)
+![users](./screenshots/02_films_above_avg_length.png)
 
 ---
 
@@ -54,4 +52,4 @@ GROUP BY DATE_FORMAT(payment_date, '%Y-%m')
 ORDER BY total_payments DESC
 LIMIT 1;
 
-![users](screenshots/03_max_payment_month.png)
+![users](./screenshots/03_max_payment_month.png)
