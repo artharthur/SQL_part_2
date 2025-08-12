@@ -5,7 +5,7 @@
 - количество покупателей.
 
 **SQL-запрос:**
-```sql
+sql
 SELECT
     s.first_name AS staff_first_name,
     s.last_name AS staff_last_name,
@@ -17,7 +17,7 @@ JOIN address a ON st.address_id = a.address_id
 JOIN city c ON a.city_id = c.city_id
 JOIN customer cu ON st.store_id = cu.store_id
 GROUP BY st.store_id
-HAVING COUNT(cu.customer_id) > 300;```
+HAVING COUNT(cu.customer_id) > 300;
 
 ![users](./screenshots/01_store_over_300_customers.png)
 
